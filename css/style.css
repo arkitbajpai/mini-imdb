@@ -1,0 +1,80 @@
+/* ===== Design tokens ===== */
+:root {
+  --bg: #e9eef5;        /* pale blue-grey wall */
+  --ink: #1d2447;       /* deep indigo, used for text + nav */
+  --ink-soft: #5a6286;
+  --seat: #d6334f;      /* cinema-seat red, the one accent */
+  --ticket: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ===== Navigation ===== */
+.site-nav { background: var(--ink); padding: 14px 0; }
+.brand {
+  font-family: "Anton", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a { color: #c9cff0; text-decoration: none; margin-left: 24px; font-weight: 500; }
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.count-pill {
+  background: var(--seat); color: #fff; border-radius: 20px;
+  padding: 1px 9px; font-size: .8rem; margin-left: 4px;
+}
+
+/* ===== Hero + search ===== */
+.hero { padding: 64px 0 36px; }
+.hero-small { padding: 44px 0 12px; }
+.hero h1 { font-family: "Anton", sans-serif; font-size: clamp(2.6rem, 7vw, 4.5rem); text-transform: uppercase; margin: 0; }
+.hero p { color: var(--ink-soft); font-size: 1.1rem; }
+.search-box {
+  max-width: 640px; padding: 16px 20px; font-size: 1.15rem;
+  border: 3px solid var(--ink); border-radius: 0; background: var(--ticket);
+}
+.search-box:focus { border-color: var(--seat); box-shadow: none; }
+
+.status { color: var(--ink-soft); min-height: 1.5rem; font-weight: 500; }
+
+/* ===== Ticket-stub movie card ===== */
+.ticket {
+  position: relative; display: flex; height: 100%;
+  background: var(--ticket); cursor: pointer;
+  border-left: 6px solid var(--seat);
+  transition: transform .15s;
+}
+.ticket:hover { transform: translateY(-3px); }
+.ticket:focus-visible { outline: 3px solid var(--seat); outline-offset: 2px; }
+.ticket img { width: 110px; object-fit: cover; background: #cfd6e6; flex-shrink: 0; }
+.ticket-body {
+  padding: 14px; display: flex; flex-direction: column; flex: 1;
+  border-left: 2px dashed #c4cbe0;   /* the "perforation" */
+}
+.ticket-title { font-weight: 700; font-size: 1.05rem; line-height: 1.25; margin: 0 0 4px; }
+.ticket-meta { color: var(--ink-soft); font-size: .9rem; text-transform: capitalize; margin-bottom: 12px; }
+
+/* ===== Buttons ===== */
+.btn-fav, .btn-ink {
+  border-radius: 0; font-weight: 700; margin-top: auto; align-self: flex-start;
+  border: 2px solid var(--ink); background: transparent; color: var(--ink); padding: 6px 14px;
+}
+.btn-fav:hover, .btn-ink:hover { background: var(--ink); color: #fff; }
+.btn-fav.is-fav { background: var(--seat); border-color: var(--seat); color: #fff; }
+.btn-fav.is-fav:hover { background: var(--ink); border-color: var(--ink); }
+
+/* ===== Movie details page ===== */
+.back-link { color: var(--ink-soft); text-decoration: none; font-weight: 500; }
+.poster { width: 100%; max-width: 340px; box-shadow: 10px 10px 0 var(--ink); }
+.movie-title { font-family: "Anton", sans-serif; font-size: clamp(2.2rem, 5vw, 3.4rem); text-transform: uppercase; }
+.rating-badge { display: inline-block; background: var(--ink); color: #fff; padding: 4px 12px; font-weight: 700; margin: 0 8px 8px 0; }
+.plot { font-size: 1.15rem; line-height: 1.7; max-width: 62ch; }
+.facts dt { color: var(--ink-soft); font-weight: 500; }
+.facts dd { margin-bottom: 10px; }
+
+@media (prefers-reduced-motion: reduce) { .ticket { transition: none; } }

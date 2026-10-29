@@ -1,0 +1,37 @@
+# CineFind – Mini IMDb Clone
+
+A small movie search app built with **vanilla JavaScript** (no JS libraries/frameworks) and the [OMDb API](https://www.omdbapi.com/). Bootstrap CSS is used for the grid and form styling.
+
+🔗 **Live demo:** https://YOUR-USERNAME.github.io/mini-imdb/
+🎥 **Video walkthrough:** _add your YouTube/Drive link here_
+
+## Features
+- **Live search** – results update as you type (debounced to avoid spamming the API), with a "Load more" button for extra pages.
+- **Favourites** – add/remove from any card; stored in `localStorage`, so they persist after refresh or closing the browser.
+- **Movie page** – poster, title, plot, IMDb rating, genre, cast, director, runtime, awards, and more.
+- **My favourites page** – all saved movies with a remove button.
+
+## Project structure
+```
+mini-imdb/
+├── index.html          # Home: search + results
+├── movie.html          # Movie details page (?id=imdbID)
+├── favourites.html     # My favourite movies
+├── css/style.css       # Custom styling (ticket-stub design)
+└── js/
+    ├── config.js       # API key + constants
+    ├── api.js          # OMDb requests
+    ├── storage.js      # localStorage favourites logic
+    ├── ui.js           # Shared UI helpers (movie card, buttons)
+    ├── home.js         # Home page logic
+    ├── movie.js        # Movie page logic
+    └── favourites.js   # Favourites page logic
+```
+
+## Run locally
+1. Get a free API key: https://www.omdbapi.com/apikey.aspx
+2. Open `js/config.js` and replace `YOUR_API_KEY_HERE` with your key.
+3. Open `index.html` in a browser (or use VS Code's *Live Server*).
+
+## Tech
+HTML5, CSS3, Bootstrap 5 (CSS only), vanilla JavaScript (fetch, async/await, localStorage, URLSearchParams).

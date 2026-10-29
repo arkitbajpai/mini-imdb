@@ -2,8 +2,8 @@
 
 A small movie search app built with **vanilla JavaScript** (no JS libraries/frameworks) and the [OMDb API](https://www.omdbapi.com/). Bootstrap CSS is used for the grid and form styling.
 
-🔗 **Live demo:** https://YOUR-USERNAME.github.io/mini-imdb/
-🎥 **Video walkthrough:** _add your YouTube/Drive link here_
+🔗 **Live demo:** https://arkitbajpai.github.io/mini-imdb/index.html
+
 
 ## Features
 - **Live search** – results update as you type (debounced to avoid spamming the API), with a "Load more" button for extra pages.

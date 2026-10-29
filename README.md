@@ -28,10 +28,6 @@ mini-imdb/
     └── favourites.js   # Favourites page logic
 ```
 
-## Run locally
-1. Get a free API key: https://www.omdbapi.com/apikey.aspx
-2. Open `js/config.js` and replace `YOUR_API_KEY_HERE` with your key.
-3. Open `index.html` in a browser (or use VS Code's *Live Server*).
 
 ## Tech
 HTML5, CSS3, Bootstrap 5 (CSS only), vanilla JavaScript (fetch, async/await, localStorage, URLSearchParams).

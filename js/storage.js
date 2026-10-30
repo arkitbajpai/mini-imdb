@@ -1,4 +1,4 @@
-// Favourites persistence using localStorage (survives refresh / closing the browser).
+
 const FAV_STORAGE_KEY = "cinefind_favourites";
 
 /** Returns the array of favourite movie objects. */
